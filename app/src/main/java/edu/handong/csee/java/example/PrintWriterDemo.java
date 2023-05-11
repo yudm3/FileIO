@@ -15,7 +15,7 @@ public class PrintWriterDemo {
 		PrintWriter outputStream = null;
 		
 		try {
-			outputStream = new PrintWriter(fileName);
+			outputStream = new PrintWriter(fileName); 
 		} catch(FileNotFoundException e) {
 			System.out.println("Error opening the file " + fileName);
 			System.exit(0);
