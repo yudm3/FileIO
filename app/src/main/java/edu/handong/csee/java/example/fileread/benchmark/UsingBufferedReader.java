@@ -9,11 +9,11 @@ public class UsingBufferedReader {
     public static void main(String[] args) throws IOException {
 
 
-        //-------------- Test reading 1 MB file. --------------------
+        //-------------- Test reading input MB file. --------------------
 
         StopWatch.start();
 
-        BufferedReader inputStream= new BufferedReader(new FileReader(DumpDataWriter.input1MB));
+        BufferedReader inputStream= new BufferedReader(new FileReader(args[0] + ".txt"));
         while (inputStream.read()!=-1){}
 
         long duration = StopWatch.stop();
@@ -21,7 +21,7 @@ public class UsingBufferedReader {
         
         inputStream.close();
 
-
+        /*
         //-------------- Test reading 10 MB file. --------------------
 
         StopWatch.start();
@@ -33,6 +33,7 @@ public class UsingBufferedReader {
         System.out.println(duration2 + " milsec");
 
         inputStream2.close();
+        */
 
         /*
         //-------------- Test reading 100 MB file. --------------------
